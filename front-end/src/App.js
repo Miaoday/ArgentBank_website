@@ -1,10 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { Navigate } from 'react-router-dom';
-// import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { loginSuccessful, logout } from './redux/actions/AuthAction.jsx';
-// import { sentUserData } from './redux/actions/UserAction.jsx';
 import './App.css';
 
 import Home from './pages/home/Home.jsx';
@@ -16,16 +13,11 @@ import Error from './pages/error/Error.jsx';
 
 const token = localStorage.getItem('token') || sessionStorage.getItem("token");
 
-
 function App() {
   const dispatch = useDispatch();
-  // const getUserName = useSelector((state)=>state.user.userData)
-  // const isConnected = useSelector((store)=>store.auth.connection)
-  
   useEffect(()=>{    
     if (token) {
-      dispatch(loginSuccessful(token)); 
-        
+      dispatch(loginSuccessful(token));   
     } else {
       dispatch(logout());
   }
@@ -34,7 +26,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Header/>
+        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='login' element={<Login />} />
