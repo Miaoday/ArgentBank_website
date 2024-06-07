@@ -1,7 +1,7 @@
 import React from "react";
 import './feature.css';
 
-function Feature ({image, alt, title, description}){
+function Feature ({image, alt, title, description}) {
   return(
     <div className="feature-item">
       <img 

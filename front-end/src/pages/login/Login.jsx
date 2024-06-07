@@ -1,16 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import Buttons from '../../components/buttons/Buttons.jsx';
 import './login.css';
 
-function Login (){
+function Login () {
   const [user, setUser] = useState('');
   const [pwd, setPwd] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [errMsg, setErrMsg]= useState('');
   const token = localStorage.getItem("token") || sessionStorage.getItem("token");
-
   const navigate = useNavigate();
 
   const handleUserInput = (e) => setUser(e.target.value)
@@ -96,11 +94,10 @@ function Login (){
           type='submit' 
           buttonName='Sign In'
           />  
-          {errMsg && <p>{errMsg}</p>}
+          {errMsg && <p className='errMsg'>{errMsg}</p>}
         </form>    
       </section>
     </main>
   )
 }
 export default Login;
-

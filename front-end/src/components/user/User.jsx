@@ -2,13 +2,11 @@ import { useState, useEffect } from 'react';
 import { useDispatch , useSelector} from 'react-redux';
 import { loginSuccessful } from '../../redux/actions/AuthAction';
 import { getUserName } from '../../redux/actions/UserAction';
-
 import UserInfo from './UserInfo';
 import Buttons from '../buttons/Buttons';
 import './user.css';
-// import userReducer from '../../redux/reducer/UserReducer';
 
-function User(){
+function User() {
   const [isOpen, setIsOpen]= useState(false);
   const [userData, setUserData] = useState({});
   const token = localStorage.getItem("token") || sessionStorage.getItem("token");
@@ -60,7 +58,7 @@ function User(){
     } 
   },[dispatch, token]);
   
-  return(   
+  return(         
     <>
       <div className='header'>
         <h1>Welcome back</h1>

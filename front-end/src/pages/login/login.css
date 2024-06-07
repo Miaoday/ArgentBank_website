@@ -1,9 +1,8 @@
-
 .main {
   flex: 1;
   padding: 60px 0 330px;
 }
-
+  
 .bg-dark {
   background-color: #12002b;
 }
@@ -63,4 +62,9 @@
   color: #fff;
   border: 0;
   cursor: pointer;
+}
+.errMsg {
+  color:red;
+  font-weight: 800;
+  font-style: oblique;
 }

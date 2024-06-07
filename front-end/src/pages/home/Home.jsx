@@ -4,6 +4,7 @@ import data from '../../data/feature_data.json';
 import './home.css';
 
 function Home (){
+  
   return(
     <div>
       <main>

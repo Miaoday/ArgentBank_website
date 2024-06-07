@@ -1,8 +1,8 @@
 .error {
-    flex: 1 1;
-    padding: 60px 0 340px;
+  flex: 1 1;
+  padding: 60px 0 340px;
 }
 
 .error-title {
-    font-size: 4em;
+  font-size: 4em;
 }

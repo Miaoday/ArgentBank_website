@@ -1,32 +1,22 @@
 const initialState = {
-  status: "user",
+  status: "idle",
   userData: {},
   createdAt: null
 }
-
+  
 export default function userReducer(state= initialState, action){
   switch (action.type){
     case 'GET_USER_NAME':
       return {
         ...state,
         status: "getSuccessful",
-        // userData: action.payload,
         userData: {
           ...state.userData,
           userName: action.payload.userData.userName
         },
         createdAt: action.payload.createdAt
       }
-    case 'SENT_USER_DATA':
-      return{
-        ...state,
-        status: "sentUserData",
-        userData: {
-          ...state.userData,
-          userName: action.payload.userData.userName
-        },
-        createdAt: action.payload.createdAt
-      }
+
     case 'EDIT_USER_NAME':
       return{
         ...state,
@@ -42,5 +32,5 @@ export default function userReducer(state= initialState, action){
     }
     default:
       return state;
-    }
+  }
 }

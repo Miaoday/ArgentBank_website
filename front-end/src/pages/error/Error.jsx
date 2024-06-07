@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
 import Buttons from '../../components/buttons/Buttons';
 import './error.css';
 

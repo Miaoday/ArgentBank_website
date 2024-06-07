@@ -1,4 +1,3 @@
-
 const initialState = {
   status: "auth",
   connection: false,
