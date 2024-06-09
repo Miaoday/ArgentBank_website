@@ -1,4 +1,3 @@
-
 export const loginSuccessful = (token) => {
   return {
     type: 'LOGIN_SUCCESSFUL',

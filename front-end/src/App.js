@@ -17,8 +17,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(()=>{    
     if (token) {
-      dispatch(loginSuccessful(token)); 
-        
+      dispatch(loginSuccessful(token));   
     } else {
       dispatch(logout());
   }
@@ -27,7 +26,7 @@ function App() {
   return (
     <Router>
       <div>
-        <Header/>
+        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='login' element={<Login />} />
